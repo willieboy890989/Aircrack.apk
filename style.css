@@ -1,0 +1,105 @@
+:root{
+  --brand:#0b5ed7;
+  --muted:#666;
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --radius:8px;
+  --container-width:1100px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{
+  width:clamp(320px, 92%, var(--container-width));
+  margin:0 auto;
+  padding:1.4rem 0;
+}
+.site-header{
+  background:#fff;
+  border-bottom:1px solid #e6edf3;
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.brand{
+  margin:0;
+  font-size:1.15rem;
+  color:var(--brand);
+}
+.nav a{
+  color:var(--muted);
+  margin-left:1rem;
+  text-decoration:none;
+  font-weight:600;
+}
+.nav a:hover{color:var(--brand)}
+.hero{
+  background:linear-gradient(180deg, rgba(11,94,215,0.06), rgba(11,94,215,0.02));
+  padding:3.2rem 0;
+  text-align:center;
+}
+.hero h2{margin:0 0 .6rem; font-size:clamp(1.25rem, 2.6vw, 2rem)}
+.hero p{margin:0 0 1rem; color:var(--muted)}
+.btn{
+  display:inline-block;
+  background:var(--brand);
+  color:#fff;
+  padding:.6rem 1rem;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+}
+.services h3, .about h3, .contact h3{margin-top:0}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+.card{
+  background:var(--card);
+  padding:1rem;
+  border-radius:var(--radius);
+  box-shadow:0 1px 2px rgba(12,20,30,0.04);
+}
+.card h4{margin:0 0 .5rem}
+.contact form{
+  margin-top:0.6rem;
+  display:grid;
+  gap:.6rem;
+  max-width:520px;
+}
+.contact input, .contact textarea{
+  width:100%;
+  padding:.6rem;
+  border:1px solid #e3e8ee;
+  border-radius:6px;
+  font:inherit;
+}
+.contact label{font-size:.9rem; color:var(--muted)}
+.site-footer{
+  margin-top:2rem;
+  padding:1rem 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+  background:transparent;
+}
+@media (max-width:640px){
+  .nav{display:none}
+  .hero{padding:2rem 0}
+}
