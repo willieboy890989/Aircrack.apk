@@ -13,6 +13,24 @@
     <meta name="twitter:image" content="/path/to/image.jpg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <title>Ortiz and Sons Handyman Services</title>
+
+    <!-- Resource hints for faster connection setup to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://formspree.io">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://formspree.io">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Moved to head for earlier discovery and tracking accuracy, using async to avoid blocking parser -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
 </head>
 <body>
     <h1>Welcome to Ortiz and Sons Handyman Services</h1>
@@ -23,12 +41,5 @@
         <input type="email" id="email" name="email" required>
         <input type="submit" value="Submit">
     </form>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_TRACKING_ID');
-    </script>
 </body>
 </html>
